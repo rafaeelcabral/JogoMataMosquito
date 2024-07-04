@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(249, 232, 1, 0.5);
+}
+
+/*--------BOOTSTRAP--------*/
+/* Small divices [até 767px] */
+  @media(max-width: 768px){
+    .container{
+        width: 80%;
+        height: 600px;
+        margin: 60px auto;
+    }
+
+    form{
+        width: 100%;
+        height: 600px;
+        margin: 10px auto;
+    }
+    
+    .image-placeholder {
+        width: 60%;
+        height: 350px;
+        margin-top: 10px;
+        margin-left: 65px;
+    }
+    
+    select {
+        width: 250px;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 50px;
+        margin-left: 25px;
+    }
+    
+    input[type="submit"] {
+        width: 250px;
+        margin-top: 20px;
+        margin-left: 25px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+  }  
+
+  /* Medium devices [768px até 1000px] */
+  @media(min-width: 769px){
+    .container{
+        width: 80%;
+        height: 600px;
+        margin: 60px auto;
+    }
+
+    form{
+        width: 100%;
+        height: 600px;
+        margin: 10px auto;
+    }
+    
+    .image-placeholder {
+        width: 60%;
+        height: 350px;
+        margin-top: 10px;
+        margin-left: 150px;
+    }
+    
+    select {
+        width: 500px;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+    
+    input[type="submit"] {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 70px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+  }    
+
+  /* Large Devices [1000px ou +] */
+  @media(min-width: 1000px){
+    .container{
+        width: 1200px;
+        height: 500px;
+        margin: 0px auto;
+    }
+    
+    form{
+        width: 40%;
+        height: 500px;
+        margin: 100px auto;
+    }
+    
+    .image-placeholder {
+        width: 60%;
+        height: 350px;
+        margin-top: 10px;
+        margin-left: 100px;
+    }
+    
+    select {
+        width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    
+    input[type="submit"] {
+        width: 300px;
+        margin-top: 20px;
+        margin-left: 100px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+  }
