@@ -8,8 +8,6 @@ var pontos = 0;
 
 var vida = 3;
 
-console.log(document.getElementsByTagName("td"));
-
 document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
 
 if(getLevel == "Fácil"){
