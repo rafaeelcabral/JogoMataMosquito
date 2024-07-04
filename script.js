@@ -4,11 +4,13 @@ const getLevel = urlParametros.get("nivel");
 
 var flag = 0;
 
+var pontos = 0;
+
 var vida = 3;
 
 console.log(document.getElementsByTagName("td"));
 
-document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Vida: " + vida;
+document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
 
 if(getLevel == "Fácil"){
     setInterval(function() {
@@ -67,6 +69,8 @@ function clicou() {
 
     flag = 1;
 
+    pontos = pontos + 10;
+
     var i = 0;
 
     while(i < document.getElementsByTagName("td").length) {
@@ -79,6 +83,8 @@ function clicou() {
 
     }
 
+    document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
+
 }
 
 function verificarSeClicou() {
@@ -87,11 +93,11 @@ function verificarSeClicou() {
     }
 
     if(vida == 0) {
-        alert("GAME OVER !!!");
+        alert("GAME OVER !!! | " + "Pontos: " + pontos);
         location.href = "home.html";
     }
 
-    document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Vida: " + vida;
+    document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
 }
 
 
