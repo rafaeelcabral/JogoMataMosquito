@@ -8,12 +8,16 @@ var pontos = 0;
 
 var vida = 3;
 
-document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
+document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>";
 
 if(getLevel == "Fácil"){
     setInterval(function() {
 
-        var aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        var aleatoryNumber = 30;
+
+        while(aleatoryNumber == 30) {
+            aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        }
 
         document.getElementsByTagName("td")[aleatoryNumber].style.visibility = "visible";
 
@@ -29,7 +33,11 @@ if(getLevel == "Fácil"){
 if(getLevel == "Médio"){
     setInterval(function() {
 
-        var aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        var aleatoryNumber = 30;
+
+        while(aleatoryNumber == 30) {
+            aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        }
 
         document.getElementsByTagName("td")[aleatoryNumber].style.visibility = "visible";
 
@@ -45,7 +53,11 @@ if(getLevel == "Médio"){
 if(getLevel == "Difícil"){
     setInterval(function() {
 
-        var aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        var aleatoryNumber = 30;
+
+        while(aleatoryNumber == 30) {
+            aleatoryNumber = Math.floor(Math.random() * (35 - 0 + 1)) + 0;
+        }
 
         document.getElementsByTagName("td")[aleatoryNumber].style.visibility = "visible";
 
@@ -81,11 +93,18 @@ function clicou() {
 
     }
 
-    document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
+    if(vida == 1) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>";
+    } else if(vida == 2) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>";
+    } else if(vida == 3) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>";
+    }
 
 }
 
 function verificarSeClicou() {
+    
     if(flag == 0) {
         vida = vida - 1;
     }
@@ -93,9 +112,14 @@ function verificarSeClicou() {
     if(vida == 0) {
         alert("GAME OVER !!! | " + "Pontos: " + pontos);
         location.href = "home.html";
+    } else if(vida == 1) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>";
+    } else if(vida == 2) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_vazio.png' class='imagem'>";
+    } else if(vida == 3) {
+        document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>";
     }
 
-    document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + vida;
 }
 
 
