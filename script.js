@@ -12,6 +12,7 @@ document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Po
 
 if(getLevel == "Fácil"){
     setInterval(function() {
+
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
@@ -31,6 +32,7 @@ if(getLevel == "Fácil"){
 
 if(getLevel == "Médio"){
     setInterval(function() {
+
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
@@ -50,6 +52,7 @@ if(getLevel == "Médio"){
 
 if(getLevel == "Difícil"){
     setInterval(function() {
+        
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
