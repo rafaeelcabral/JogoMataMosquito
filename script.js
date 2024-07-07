@@ -86,7 +86,6 @@ function clicou() {
         if(i != 30) {
             document.getElementsByTagName("td")[i].style.visibility = "hidden";
         }
-
         i++;
     }
 
