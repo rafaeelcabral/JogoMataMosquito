@@ -12,7 +12,6 @@ document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Po
 
 if(getLevel == "Fácil"){
     setInterval(function() {
-
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
@@ -32,7 +31,6 @@ if(getLevel == "Fácil"){
 
 if(getLevel == "Médio"){
     setInterval(function() {
-
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
@@ -52,7 +50,6 @@ if(getLevel == "Médio"){
 
 if(getLevel == "Difícil"){
     setInterval(function() {
-
         var aleatoryNumber = 30;
 
         while(aleatoryNumber == 30) {
@@ -76,7 +73,6 @@ if(getLevel != "Difícil" && getLevel != "Médio" && getLevel != "Fácil") {
 }
 
 function clicou() {
-
     flag = 1;
 
     pontos = pontos + 10;
@@ -84,13 +80,11 @@ function clicou() {
     var i = 0;
 
     while(i < document.getElementsByTagName("td").length) {
-
         if(i != 30) {
             document.getElementsByTagName("td")[i].style.visibility = "hidden";
         }
 
         i++;
-
     }
 
     if(vida == 1) {
@@ -100,11 +94,9 @@ function clicou() {
     } else if(vida == 3) {
         document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>";
     }
-
 }
 
-function verificarSeClicou() {
-    
+function verificarSeClicou() { 
     if(flag == 0) {
         vida = vida - 1;
     }
@@ -119,7 +111,6 @@ function verificarSeClicou() {
     } else if(vida == 3) {
         document.getElementById("vida").innerHTML = "Nível: " + getLevel + "<br>" + "Pontos: " + pontos + "<br>" + "Vida: " + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>" + "<img src='img/coracao_cheio.png' class='imagem'>";
     }
-
 }
 
 
